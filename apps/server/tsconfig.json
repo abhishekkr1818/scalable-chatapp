@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment (ESM setup for Node 20+ and Next.js 15)
+    "target": "esnext",
+    "module": "nodenext",             // ✅ ESM-compatible
+    "moduleResolution": "nodenext",   // ✅ resolves .js/.ts properly in ESM
+    "lib": ["esnext"],
+    "types": ["node"],
+
+    // Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Type Checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // React (if ever needed in shared code)
+    "jsx": "react-jsx",
+
+    // Important for default imports like: import Redis from "ioredis";
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
+
+    // Misc
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
